@@ -14,7 +14,7 @@ after_success:
   - docker build -t anandahlawat/multi-server ./server
   - docker build -t anandahlawat/multi-worker ./worker
 
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER_NAME" --password-stdin
+  - echo "$dockerpassword" | docker login -u "$dockeruname" --password-stdin
   - docker push anandahlawat/multi-client
   - docker push anandahlawat/multi-ningx
   - docker push anandahlawat/multi-server
