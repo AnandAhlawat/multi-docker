@@ -3,19 +3,19 @@ services:
   - docker
 
 before_install:
-  - docker build -t anandahlawat/multi-docker-test -f ./client/Dockerfile.dev ./client
+  - docker build -t anandahlawat90/multi-docker-test -f ./client/Dockerfile.dev ./client
 
 script:
   - echo "no tests!"
 
 after_success:
-  - docker build -t anandahlawat/multi-client ./client
-  - docker build -t anandahlawat/multi-ningx ./nginx
-  - docker build -t anandahlawat/multi-server ./server
-  - docker build -t anandahlawat/multi-worker ./worker
+  - docker build -t anandahlawat90/multi-client ./client
+  - docker build -t anandahlawat90/multi-ningx ./nginx
+  - docker build -t anandahlawat90/multi-server ./server
+  - docker build -t anandahlawat90/multi-worker ./worker
 
   - echo "$dockerpassword" | docker login -u "$dockeruname" --password-stdin
-  - docker push anandahlawat/multi-client:latest
-  - docker push anandahlawat/multi-ningx:latest
-  - docker push anandahlawat/multi-server:latest
-  - docker push anandahlawat/multi-worker:latest
+  - docker push anandahlawat90/multi-client:latest
+  - docker push anandahlawat90/multi-ningx:latest
+  - docker push anandahlawat90/multi-server:latest
+  - docker push anandahlawat90/multi-worker:latest
