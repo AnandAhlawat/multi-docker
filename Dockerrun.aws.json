@@ -24,7 +24,7 @@
     },
     {
       "name":"nginx",
-      "image":"anandahlawat90/multi-nginx",
+      "image":"anandahlawat90/multi-ningx",
       "essential":true,
       "portMappings":[
         {
